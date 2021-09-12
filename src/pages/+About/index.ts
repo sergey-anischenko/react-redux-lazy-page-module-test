@@ -1,4 +1,4 @@
-import { AsyncPageModule } from '../../_core/decorator/async-page-decorator';
+import { AsyncPageModule } from '../../_core/async-page/async-page.decorator';
 import { aboutReducer } from './store/reducer';
 import { AboutComponent } from './component/About';
 
