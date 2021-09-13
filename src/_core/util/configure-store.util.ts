@@ -5,7 +5,6 @@ export interface ICustomStoreReducers {
 }
 
 export interface ICustomStore extends Store {
-  asyncReducers: ICustomStoreReducers;
   injectReducer: (key: string, reducer: Reducer) => void;
 }
 
@@ -16,13 +15,13 @@ const createReducer = (staticReducers: ICustomStoreReducers, asyncReducers?: ICu
   });
 };
 
-export const configureStore = (initialState: object, staticReducers: ICustomStoreReducers): ICustomStore => {
+export const configureStore = (staticReducers: ICustomStoreReducers = {}, initialState: object = {}): ICustomStore => {
   const store: ICustomStore = createStore(createReducer(staticReducers), initialState);
-  store.asyncReducers = {};
+  const asyncReducers: ICustomStoreReducers = {};
 
   store.injectReducer = (key, asyncReducer) => {
-    store.asyncReducers[key] = asyncReducer;
-    store.replaceReducer(createReducer(store.asyncReducers, staticReducers));
+    asyncReducers[key] = asyncReducer;
+    store.replaceReducer(createReducer(asyncReducers, staticReducers));
   };
 
   return store;
