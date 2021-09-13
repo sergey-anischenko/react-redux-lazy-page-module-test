@@ -4,6 +4,8 @@
 
 ![Demonstration](http://vgifbot.online/gif/BAACAgIAAxkBAAE9Dr5hP5_RCPcBj6kIqL0kDrjI-2kNzAACOhAAAiIcAAFKRh2GLZP_pUUgBA_1631559658.12.gif)
 
+Входной точкой каждой такой страницы-модуля должен быть экспорт объекта определенного интерфейса (можно получить через util функцию getLazyPageModule) и соответственно сам компонент страницы работает через простую обертку над функцией lazу()
+
 ## Available Scripts
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
