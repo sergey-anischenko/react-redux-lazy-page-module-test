@@ -1,8 +1,12 @@
-# Getting Started with Create React App
+# Lazy Page Modules Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+В Angular 2+ из коробки есть модули, которые можно лениво подгружать вместе с кусками состояния и т.д. Стало интересно сделать что-то подобное на реакте, за пару вечеров сделал вот такое тестовое решение :)
+
+![Demonstration](http://vgifbot.online/gif/BAACAgIAAxkBAAE9Dr5hP5_RCPcBj6kIqL0kDrjI-2kNzAACOhAAAiIcAAFKRh2GLZP_pUUgBA_1631559658.12.gif)
 
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
